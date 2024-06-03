@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Suhani Dashboard</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+  <!-- Vendor CSS Files -->
+  <link href="/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/css/homepage.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/dashboard.css">
+
+</head>
+
+<body>
+ <!-- Navbar -->
+ <header id="header" class="fixed-top bg-dark">
+  <div class="container d-flex align-items-center">
+
+    <h1 class="logo me-auto"><a href="index.html">Suhani</a></h1>
+    <a href="index.html" class="logo me-auto"><img src="assets/img/log.svg" alt="" class="img-fluid"></a>
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a class="nav-link scrollto active" href="/">Home</a></li>
+        <li><a class="nav-link scrollto" href="#about">About Us</a></li>
+        <li><a class="nav-link scrollto" href="/dashboard">Dashboard</a></li>
+        <li><a class="nav-link scrollto" href="/contact">Contact</a></li>
+        <li><a class="getstarted scrollto" href="/signin" style="border: 2px solid aqua;">Signin / Register</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+  </div>
+</header>
+
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container" style="padding-top: 0 !important;">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-0 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <h1 style="text-align: center;">Dashboard</h1>
+          <h2 style="text-align: center;">Welcome to the Dashboard.<br><strong>Click below to add patients</strong>. </h2>
+          <button class="btn-get-started scrollto" style="border: 2px solid aqua;" onclick="travel()">Add Patient</button>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="/images/register.svg" id="logo" class="img-fluid animated" style="margin-left: auto; margin-right: auto;" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="main" style="margin: 10px; " >
+      <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th scope="col" style="text-align: center;">Name</th>
+            <th scope="col" style="text-align: center;">Location</th>
+            <th scope="col" style="text-align: center;">Month</th>
+            <th scope="col" style="text-align: center;">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(let i=0;i<user.womens.length;i++) {%>
+            <tr>
+              <td style="text-align: center;"><%=user.womens[i].name %></td>
+              <td style="text-align: center;"><%=user.womens[i].location %></td>
+              <td style="text-align: center;"><%=user.womens[i].month %></td>
+              <td style="text-align: center;"><button type="button" class="btn btn-outline-primary" onclick="redirect('<%=user.womens[i]._id%>')">Link</button>
+              </td>
+            </tr>
+          <%}%>
+        </tbody>
+      </table>
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" style="border-top: 2px dotted blue;">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>SUHANI</h3>
+            <p>
+              New Mahendra Road, <br>
+              Mumbai - 535022<br>
+              India <br><br>
+              <strong>Phone:</strong> (+91) 9088584898 <br>
+              <strong>Email:</strong> suhani@fmch.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Dashboard</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services cater to: </h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Pregnant Women</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Malnutritioned Child</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Lactating Women</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Angadwadi Workers</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>You can connect to <strong>Suhani</strong> by our folllowing social media handles:</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>CFG</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by Good Samaritans.
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="/vendor/aos/aos.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="/vendor/php-email-form/validate.js"></script>
+
+
+  <!-- Template Main JS File -->
+  <script src="/javascript/homepage.js"></script>
+  <script src="/javascript/dashboard.js"></script>
+</body>
+
+</html>

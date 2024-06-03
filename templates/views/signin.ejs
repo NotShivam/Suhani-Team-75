@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <meta name="google-signin-client_id" content="763885809251-p2iru0nrpe5nj6e5gikbmugni649gv0k.apps.googleusercontent.com">
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/signup.css" />
+    <title>Welcome to Suhani !!</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="#" class="sign-in-form" id="signInMyForm">
+            <h2 class="title">Suhani</h2>
+            <h4 class="title-rem">Login</h4>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" id="signInUsername" placeholder="email" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="signInPassword" placeholder="Password" />
+            </div>
+            <input type="submit" value="Login" class="btn solid" onclick="login()" />
+            <p class="social-text">Or Sign in with Google</p>
+            <div class="social-media">
+              <div id="g_id_onload"
+                data-client_id="763885809251-p2iru0nrpe5nj6e5gikbmugni649gv0k.apps.googleusercontent.com"
+                data-login_uri="http://localhost:3000/api/user/google-signin"
+                data-auto_prompt="false">
+                </div>
+                <div class="g_id_signin"
+                    data-type="standard"
+                    data-size="large"
+                    data-theme="outline"
+                    data-text="sign_in_with"
+                    data-shape="rectangular"
+                    data-logo_alignment="left">
+                </div>
+            </div>
+          </form>
+          <form id="signUpMyForm" class="sign-up-form">
+            <h2 class="title">Suhani</h2>
+            <h4 class="title-rem">Register</h4>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" id="signUpName" placeholder="Name" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="signUpEmail" placeholder="Email" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-mobile"></i>
+              <input id="signUpPhone" placeholder="Phone" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="signUpPassword" placeholder="Password" />
+            </div>
+            <input type="submit" class="btn" value="Sign up" onclick="signup()"/>
+            <p class="social-text">Or Sign up with Google</p>
+            <div class="social-media">
+              <div id="g_id_onload"
+                data-client_id="763885809251-p2iru0nrpe5nj6e5gikbmugni649gv0k.apps.googleusercontent.com"
+                data-login_uri="http://localhost:3000/api/user/google-signin"
+                data-auto_prompt="false">
+                </div>
+                <div class="g_id_signin"
+                    data-type="standard"
+                    data-size="large"
+                    data-theme="outline"
+                    data-text="sign_in_with"
+                    data-shape="rectangular"
+                    data-logo_alignment="left">
+                </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>Welcome to Suhani. New here?</h3>
+            <p>
+              Enter your details and start your journey with us.
+            </p>
+            <button class="btn transparent" id="sign-up-btn">
+              Register
+            </button>
+          </div>
+          <img src="/images/login.png" class="image" alt="" />
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>Already a user?</h3>
+            <p>
+              To keep connected with us, please login with your personal info.
+            </p>
+            <button class="btn transparent" id="sign-in-btn">
+              Login
+            </button>
+          </div>
+          <img src="/images/signup.png" class="image" alt="" />
+        </div>
+      </div>
+    </div>
+    <script src="/javascript/signup.js"></script>
+    <script src="/javascript/signin.js"></script>
+  </body>
+</html>

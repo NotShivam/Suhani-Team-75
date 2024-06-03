@@ -1,0 +1,46 @@
+[
+    {
+        "bloodPressure": 120,
+        "month": 5,
+        "height": 68,
+        "weight": 78,
+        "first":1,
+        "second":0,
+        "third":1,
+        "fourth":0,
+        "fifth":1
+    },
+    {
+        "bloodPressure": 101,
+        "month": 2,
+        "height": 68,
+        "weight": 88,
+        "first":1,
+        "second":0,
+        "third":1,
+        "fourth":0,
+        "fifth":1
+    },
+    {
+        "bloodPressure": 97,
+        "month": 8,
+        "height": 68,
+        "weight": 38,
+        "first":1,
+        "second":1,
+        "third":0,
+        "fourth":0,
+        "fifth":1
+    },
+    {
+        "bloodPressure": 69,
+        "month": 1,
+        "height": 48,
+        "weight": 90,
+        "first":0,
+        "second":0,
+        "third":0,
+        "fourth":0,
+        "fifth":1
+    }
+]
